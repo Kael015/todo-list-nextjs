@@ -1,12 +1,12 @@
-import React, { ComponentPropsWithRef } from 'react'
+import React, { ComponentPropsWithRef, FormEvent } from 'react'
 
 interface Props extends ComponentPropsWithRef<'input'> {
-    text?: string
-    callback?: () => any
-  }
+  text?: string
+  callback?: (e: FormEvent<HTMLInputElement>) => any
+}
 
-export default function Input({ text, className, callback, type }: Readonly<Props>) {
+export default function Input({ text, className, callback, type, name }: Readonly<Props>) {
   return (
-    <input type={type} onChange={callback} className={className} placeholder={text}/>
+    <input type={type} id={name} onChange={callback} className={className} placeholder={text}/>
   )
 }
