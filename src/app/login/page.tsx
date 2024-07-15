@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react' 
-import Button from '@/component/button'
+import Button from '@/component/atom/button'
 import { useRouter } from 'next/navigation';
 
 function Login() {
